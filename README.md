@@ -2,17 +2,9 @@
 A collection of helpful Powershell scripts I've come across and had to use at one time or another
 
 ## Getting Started
-Follow the below steps to install these scripts on your machine.
+In order to run these scripts from the terminal, you will need to run the following command to trust Powershell scripts originating on your machine:
 
-### Allow scripts to run
+`Set-ExecutionPolicy RemoteSigned`
 
-```powershell
-PS> Set-ExecutionPolicy RemoteSigned
-```
-
-### Install the InstallModuleFromGithub module
-Found at: https://www.powershellgallery.com/packages/InstallModuleFromGitHub/0.3
-
-```powershell
-PS> Install-Module -Name InstallModuleFromGitHub -RequiredVersion 0.3 
-```
+## TODO
+- Add main script file with Switch statement to run scripts automatically, like a batch file
