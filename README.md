@@ -1,10 +1,19 @@
 # powershell-scripts
+
 A collection of helpful Powershell scripts I've come across and had to use at one time or another
 
 ## Getting Started
-In order to run these scripts from the terminal, you will need to run the following command to trust Powershell scripts originating on your machine:
 
-`Set-ExecutionPolicy RemoteSigned`
+Follow the below steps to install and use these modules.
 
-## TODO
-- Add main script file with Switch statement to run scripts automatically, like a batch file
+### Allow scripts to run
+
+```powershell
+PS> Set-ExecutionPolicy RemoteSigned
+```
+
+### Install modules
+
+```powershell
+PS> . .\InstallModules
+```
