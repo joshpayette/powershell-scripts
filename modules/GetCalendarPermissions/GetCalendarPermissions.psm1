@@ -12,18 +12,18 @@
   GetCalendarPermissions
 
 .EXAMPLE
-  GetCalendarPermissions -userName "John Doe"
+  GetCalendarPermissions -user "John Doe"
 #>
 function GetCalendarPermissions {
   param(
-    [string] $userName
+    [string] $user
   )
 
-  if ($userName -eq "") {
-    $userName = Read-Host -Prompt "Which user calendar would you like to check for permissions?"
+  if ($user -eq "") {
+    $user = Read-Host -Prompt "Which user calendar would you like to check for permissions?"
   }
   
-  Get-MailboxFolderPermission "$($userName):\Calendar" | Select-Object FolderName, User, AccessRights
+  Get-MailboxFolderPermission "$($user):\Calendar" | Select-Object FolderName, User, AccessRights
 
 }
 
