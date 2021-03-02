@@ -18,7 +18,7 @@
   AddDelegateAccess
 
 .EXAMPLE
-  AddDelegateAccess -mailbox test@test.com -user testuser@test.com
+  AddDelegateAccess -adminAccount testadmin@test.com -mailbox test@test.com -user testuser@test.com
 #>
 function AddDelegateAccess {
   param(

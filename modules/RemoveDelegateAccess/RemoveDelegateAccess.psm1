@@ -17,7 +17,7 @@
   RemoveDelegateAccess
 
 .EXAMPLE
-  RemoveDelegateAccess -mailbox test@test.com -user testuser@test.com
+  RemoveDelegateAccess -adminAccount testadmin@test.com -mailbox test@test.com -user testuser@test.com
 #>
 function RemoveDelegateAccess {
   param(
