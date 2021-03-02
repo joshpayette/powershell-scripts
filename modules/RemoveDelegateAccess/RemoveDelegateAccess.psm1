@@ -4,6 +4,8 @@
 
 .DESCRIPTION
   Removes delegate access for a user to another user's mailbox
+  
+  Must be run from Exchange Online PowerShell Module!!!
 
 .PARAMETER mailbox
   The name of the mailbox to remove access from
@@ -19,9 +21,9 @@
 #>
 function RemoveDelegateAccess {
   param(
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string] $mailbox,
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string] $user
   )
 

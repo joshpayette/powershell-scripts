@@ -4,7 +4,9 @@
 
 .DESCRIPTION
   Assigns full delegate access for a user to another user's mailbox,
-  with automapping disabled so that it doesn't pull into Outlook
+  with automapping disabled so that it doesn't pull into Outlook.
+
+  Must be run from Exchange Online PowerShell Module!!!
 
 .PARAMETER mailbox
   The name of the mailbox to grant access to
@@ -20,9 +22,9 @@
 #>
 function AddDelegateAccess {
   param(
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string] $mailbox,
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string] $user
   )
 
