@@ -23,12 +23,14 @@
 function AddDelegateAccess {
   param(
     [Parameter(Mandatory = $true)]
+    [string] $adminAccount,
+    [Parameter(Mandatory = $true)]
     [string] $mailbox,
     [Parameter(Mandatory = $true)]
     [string] $user
   )
 
-  Connect-EXOPSSession -UserPrincipalName josh@raffafinancial.com
+  Connect-EXOPSSession -UserPrincipalName $adminAccount
   Add-MailboxPermission -Identity $mailbox -User $user -AccessRights FullAccess -AutoMapping:$false
 }
 

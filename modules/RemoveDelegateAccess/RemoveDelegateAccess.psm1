@@ -22,6 +22,8 @@
 function RemoveDelegateAccess {
   param(
     [Parameter(Mandatory = $true)]
+    [string] $adminAccount,
+    [Parameter(Mandatory = $true)]
     [string] $mailbox,
     [Parameter(Mandatory = $true)]
     [string] $user
@@ -29,7 +31,7 @@ function RemoveDelegateAccess {
 
 
 
-  Connect-EXOPSSession -UserPrincipalName josh@raffafinancial.com
+  Connect-EXOPSSession -UserPrincipalName $adminAccount
   Remove-MailboxPermission -Identity $mailbox -User $user -AccessRights FullAccess
 }
 
