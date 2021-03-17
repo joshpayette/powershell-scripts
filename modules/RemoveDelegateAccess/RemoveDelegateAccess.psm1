@@ -33,6 +33,7 @@ function RemoveDelegateAccess {
 
   Connect-EXOPSSession -UserPrincipalName $adminAccount
   Remove-MailboxPermission -Identity $mailbox -User $user -AccessRights FullAccess
+  Remove-RecipientPermission -Identity $mailbox -Trustee $user -AccessRights SendAs
 }
 
 Export-ModuleMember -Function RemoveDelegateAccess

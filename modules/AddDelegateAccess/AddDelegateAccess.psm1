@@ -32,6 +32,7 @@ function AddDelegateAccess {
 
   Connect-EXOPSSession -UserPrincipalName $adminAccount
   Add-MailboxPermission -Identity $mailbox -User $user -AccessRights FullAccess -AutoMapping:$false
+  Add-RecipientPermission -Identity $mailbox -Trustee $user -AccessRights SendAs
 }
 
 Export-ModuleMember -Function AddDelegateAccess
